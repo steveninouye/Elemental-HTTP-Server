@@ -9,14 +9,26 @@
 </head>
 
 <body>
-    <form action="/elements" method="post">
-        Element Name:
-        <input type="text" name="elementName" id="elementName"> Element Symbol:
-        <input type="text" name="elemntSymbol" id="elementSymbol"> Element Atomic Number:
-        <input type="number" name="elementAtomicNumber" id="elementAtomicNumber"> Element Description:
-        <input type="text" name="elementDescription" id="elementDescription">
-        <input type="submit" value="Add Element">
+    <form action="/elements" method="POST">
+        <p>Element Name:
+            <input type="text" name="elementName" id="elementName">
+        </p>
+        <p>Element Symbol:
+            <input type="text" name="elementSymbol" id="elementSymbol">
+        </p>
+        <p>Element Atomic Number:
+            <input type="number" name="elementAtomicNumber" id="elementAtomicNumber">
+        </p>
+        <p>Element Description:
+            <input type="text" name="elementDescription" id="elementDescription">
+        </p>
+        <p>
+            <input type="submit" value="Add Element">
+        </p>
     </form>
+    <p>
+        <a href="/">back</a>
+    </p>
 </body>
 
 </html>
