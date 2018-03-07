@@ -16,6 +16,16 @@ const server = http
   .createServer((req, res) => {})
   .on('request', (req, res) => {
     const { method, url } = req;
+    if (method === 'POST') {
+      console.log(req.headers);
+      let body = '';
+      req.on('data', function(data) {
+        body += data;
+      });
+      req.on('end', function() {
+        console.log(qstring.parse(body));
+      });
+    }
 
     //define local file path
     let localFilePath;
@@ -53,7 +63,6 @@ const server = http
       res.end();
     });
   })
-  .on('data', data => {})
   .listen(port, () => {
     console.log(`server is running on port ${port}`);
   });
