@@ -121,6 +121,8 @@ const server = http
             res.write(data);
             res.end();
           });
+        } else if (method === 'DELETE') {
+        } else if (method === 'PUT') {
         }
       });
     });
