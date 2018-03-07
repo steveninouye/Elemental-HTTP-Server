@@ -11,7 +11,7 @@
 <body>
     <form action="/elements" method="POST">
         <p>Element Name:
-            <input type="text" name="elementName" id="elementName" pattern="[A-Za-z]{1,10}" maxlength="10" title="Only Letters Allowed"
+            <input type="text" name="elementName" id="elementName" pattern="[A-Za-z\s]{1,10}" maxlength="10" title="Only Letters Allowed"
                 required>
         </p>
         <p>Element Symbol:
@@ -22,7 +22,7 @@
             <input type="number" name="elementAtomicNumber" id="elementAtomicNumber" min="1" max="150" required>
         </p>
         <p>Element Description:
-            <input type="text" name="elementDescription" id="elementDescription" pattern="[A-Za-z.'!()/;:,]{0,1000}" maxlength="1000"
+            <input type="text" name="elementDescription" id="elementDescription" pattern="[A-Za-z0-9.'!()/;:,\s]{0,1000}" maxlength="1000"
                 title="Only Special Characters Allowed: .'!()/;:,">
         </p>
         <p>
