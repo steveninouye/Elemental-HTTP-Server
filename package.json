@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/steveninouye/Elemental-HTTP-Server/issues"
   },
-  "homepage": "https://github.com/steveninouye/Elemental-HTTP-Server#readme"
+  "homepage": "https://github.com/steveninouye/Elemental-HTTP-Server#readme",
+  "dependencies": {
+    "nodemon": "^1.17.1"
+  }
 }
