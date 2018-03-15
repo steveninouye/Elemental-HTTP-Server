@@ -63,7 +63,7 @@ const server = http
               });
             };
 
-            if (url === '/delete' || method === 'DELETE') {
+            if (method === 'DELETE') {
               const filePathAndName = `./public/elements/${elementName.toLowerCase()}.html`;
               fs.unlink(filePathAndName, err => {
                 console.log(`deleted ${filePathAndName}`);
@@ -125,7 +125,8 @@ const server = http
             localFilePath = '/elements' + url;
           } else if (
             publicDirFiles.indexOf(url.slice(1)) !== -1 ||
-            url.slice(-4) === '.css'
+            url.slice(-4) === '.css' ||
+            url.slice(-3) === '.js'
           ) {
             localFilePath = url;
             HTMLStatusCode = 200;
@@ -142,6 +143,8 @@ const server = http
             contentType = 'text/css';
           } else if (localFilePath.slice(-4) === '.png') {
             contentType = 'image/x-icon';
+          } else if (localFilePath.slice(-3) === '.js') {
+            contentType = 'application/javascript';
           }
 
           //read file from local file path in public directory
