@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Make a New Element</title>
+</head>
+
+<body>
+    <form action="/elements" method="POST">
+        <p>Element Name:
+            <input type="text" name="elementName" id="elementName" pattern="[A-Za-z]{1,10}" maxlength="10" title="Only Letters Allowed"
+                required>
+        </p>
+        <p>Element Symbol:
+            <input type="text" name="elementSymbol" id="elementSymbol" pattern="[A-Za-z]{1,2}" maxlength="2" title="Only Letters Allowed"
+                required>
+        </p>
+        <p>Element Atomic Number:
+            <input type="number" name="elementAtomicNumber" id="elementAtomicNumber" min="1" max="150" required>
+        </p>
+        <p>Element Description:
+            <input type="text" name="elementDescription" id="elementDescription" pattern="[A-Za-z0-9\.\'\!\(\)\/\;\:\,\s]{0,1000}" maxlength="1000"
+                title="Only Special Characters Allowed: .'!()/;:,">
+        </p>
+        <p>
+            <input type="submit" value="Add Element">
+        </p>
+    </form>
+    <p>
+        <a href="/">back</a>
+    </p>
+</body>
+
+</html>
